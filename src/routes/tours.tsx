@@ -32,13 +32,13 @@ const fieldClass =
 const labelClass = "block text-[10px] uppercase tracking-[0.2em] text-mist";
 
 function ToursPage() {
-  const [selected, setSelected] = useState(tours[0].slug);
+  const [selected, setSelected] = useState(tours[0]!.slug);
   const [sent, setSent] = useState(false);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const tour = tours.find((t) => t.slug === data.get("tour")) ?? tours[0];
+    const tour = tours.find((t) => t.slug === data.get("tour")) ?? tours[0]!;
     const message = [
       `Hello Ninea Holidays, I'd like to book: ${tour.title}`,
       `Name: ${data.get("name")}`,
