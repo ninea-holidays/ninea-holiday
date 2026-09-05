@@ -111,7 +111,7 @@ function Index() {
           </a>
           <a
             href="#connect"
-            className="grid size-9 place-items-center rounded-full bg-glass/70 text-mist ring-1 ring-hairline transition-colors hover:text-glow sm:hidden"
+            className="rounded-full bg-glass/70 px-4 py-2 text-mist ring-1 ring-hairline transition-colors hover:text-glow sm:hidden"
             aria-label="Contact Ninea Holidays"
           >
             <span className="text-[10px] uppercase tracking-[0.15em]">Say hi</span>
