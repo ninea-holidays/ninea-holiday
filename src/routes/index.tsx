@@ -7,6 +7,8 @@ import heroZanzibar from "@/assets/hero-zanzibar.jpg";
 import igDhow from "@/assets/ig-dhow.jpg";
 import igBeach from "@/assets/ig-beach.jpg";
 import igFeast from "@/assets/ig-feast.jpg";
+import turtleCave from "@/assets/turtle-cave-feeding.jpg";
+import turtleLagoon from "@/assets/turtle-lagoon-swim.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
