@@ -7,6 +7,8 @@ import heroZanzibar from "@/assets/hero-zanzibar.jpg";
 import igDhow from "@/assets/ig-dhow.jpg";
 import igBeach from "@/assets/ig-beach.jpg";
 import igFeast from "@/assets/ig-feast.jpg";
+import turtleCave from "@/assets/turtle-cave-feeding.jpg";
+import turtleLagoon from "@/assets/turtle-lagoon-swim.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -95,6 +97,44 @@ function Index() {
                 Zanzibar · 29°C
               </span>
             </div>
+          </div>
+        </section>
+
+        <section className="mt-12 sm:mt-16">
+          <h2 className="font-display text-3xl italic text-glow sm:text-4xl">
+            Moments from our tours
+          </h2>
+          <p className="mt-2 text-[12px] text-mist">
+            Real guests, real water — swimming with sea turtles at Nungwi's turtle lagoon.
+          </p>
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
+            {[
+              {
+                image: turtleCave,
+                alt: "Guest standing in clear shallow turquoise water inside a rocky sea cave with turtles",
+                caption: "Turtle cave, Nungwi",
+              },
+              {
+                image: turtleLagoon,
+                alt: "Guest swimming beside sea turtles in a clear turquoise lagoon",
+                caption: "Lagoon swim, Kichangani",
+              },
+            ].map((moment) => (
+              <figure
+                key={moment.caption}
+                className="relative overflow-hidden rounded-2xl outline-1 -outline-offset-1 outline-hairline"
+              >
+                <img
+                  src={moment.image}
+                  alt={moment.alt}
+                  loading="lazy"
+                  className="aspect-3/4 w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent px-3 pb-3 pt-10 text-[10px] uppercase tracking-[0.2em] text-glow">
+                  {moment.caption}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </section>
 
